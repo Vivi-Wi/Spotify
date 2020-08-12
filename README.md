@@ -24,6 +24,8 @@ The data used in this project was found on kaggle (https://www.kaggle.com/yamaer
 
 
 ## Files and Folders
+|File| Description|
+|:---|:---|
 |Spotify1_100yrs_EDA_200812.ipynb| Jupyter Notebook with Exploratory Data Analysis (EDA) on the dataset taken from Kaggle which comprises of tracks from the past 100 years|
 |Spotify2_Additional_Data_200812.ipynb| Jupyter Notebook with code that retrieves data via the Spotify API|
 |Spotify3_2019_EDA_200812.ipynb| Jupyter Notebook with Exploratory Data Analysis (EDA) on the second dataset, that includes tracks released 2019|
