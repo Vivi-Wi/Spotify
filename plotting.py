@@ -3,28 +3,15 @@
 
 # # Set up
 
-# In[15]:
-
-
 import pandas as pd
 import numpy as np
 import seaborn as sns
 
 import matplotlib.pyplot as plt
-
-from bokeh.plotting import figure
-from bokeh.io import output_notebook, show, output_file
-from bokeh.models import ColumnDataSource, HoverTool, Panel
-from bokeh.models.widgets import Tabs
-
 from wordcloud import WordCloud, ImageColorGenerator
 from collections import Counter
 
-
 # # Simple annual line graph
-
-# In[18]:
-
 
 def year_plot(y, df, hue=None, palette="viridis"):
     g = sns.relplot(x='year',
@@ -39,10 +26,6 @@ def year_plot(y, df, hue=None, palette="viridis"):
                     estimator=np.median,
                     data=df)
 
-
-# # Dataframe wordcloud
-
-# In[19]:
 
 
 def wc(data):
@@ -60,9 +43,10 @@ def wc(data):
 
     c = Counter()
     for d in dicts:
-        c.update(d)    
+        c.update(d)
+    c=dict(c.most_common(50))
 
-    wordcloud = WordCloud(collocations=False, max_words=500, background_color="white").generate_from_frequencies(c)
+    wordcloud = WordCloud(collocations=False, max_words=500, background_color='white').generate_from_frequencies(c)
     plt.figure().set_size_inches(18.5, 10.5)
     plt.imshow(wordcloud, interpolation="bilinear")
     plt.axis("off")
