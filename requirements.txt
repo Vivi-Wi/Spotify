@@ -39,7 +39,6 @@ dash-html-components==1.0.3
 dash-renderer==1.6.0
 dash-table==4.9.0
 databricks-cli==0.9.1
-datenguidepy==0.3.1
 decorator==4.4.2
 defusedxml==0.6.0
 diff-match-patch==20200713
@@ -205,6 +204,7 @@ widgetsnbextension==3.5.1
 wordcloud==1.7.0
 wrapt==1.11.2
 wurlitzer==2.0.1
+xcode
 xgboost==0.90
 xlrd==1.2.0
 yapf==0.28.0
