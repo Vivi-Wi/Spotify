@@ -12,10 +12,7 @@ import os,inspect
 from app import app
 
 # cleaned cluster database from csv
-currentdir = os.path.dirname(os.path.abspath(inspect.getfile(inspect.currentframe())))
-parentdir = os.path.dirname(currentdir)
-parentdir = os.path.dirname(parentdir)
-cluster_database = pd.read_csv(str(parentdir)+'/data/cluster_database.csv')
+cluster_database = pd.read_csv('data/cluster_database.csv')
 cluster_database.drop('Unnamed: 0', axis=1, inplace=True)
 cluster_database.reset_index(drop=True, inplace=True)
 
@@ -262,9 +259,9 @@ def predict(acousticness, album_track_no, danceability, duration_ms, energy, exp
     )
 
     # loading models
-    preprocessor = pickle.load(open(str(parentdir)+'/pickles/fitted_preprocessor.pkl', 'rb'))
-    bal_model = pickle.load(open(str(parentdir)+'/pickles/balanced_model.pkl', 'rb'))
-    strict_model = pickle.load(open(str(parentdir)+'/pickles/strict_model.pkl', 'rb'))
+    preprocessor = pickle.load('pickles/fitted_preprocessor.pkl', 'rb'))
+    bal_model = pickle.load(open('pickles/balanced_model.pkl', 'rb'))
+    strict_model = pickle.load(open('pickles/strict_model.pkl', 'rb'))
 
     # running models
     df_preprocessed = preprocessor.transform(df)
@@ -282,7 +279,7 @@ def predict(acousticness, album_track_no, danceability, duration_ms, energy, exp
 
     # clusters
     # loading model
-    kmeans = pickle.load(open(str(parentdir)+'/pickles/kmeans_pipe.pkl', 'rb'))
+    kmeans = pickle.load(open('pickles/kmeans_pipe.pkl', 'rb'))
 
     # putting the inputted data in the model format
     kmeans_features = df[['acousticness', 'danceability', 'duration_ms', 'energy', 'explicit',

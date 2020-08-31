@@ -14,12 +14,8 @@ import os, inspect
 from app import app
 
 # loading data for graph
-currentdir = os.path.dirname(os.path.abspath(inspect.getfile(inspect.currentframe())))
-parentdir = os.path.dirname(currentdir)
-parentdir = os.path.dirname(parentdir)
-
-data_genre = pd.read_csv(str(parentdir)+'/data/data_w_genres.csv')
-data = pd.read_csv(str(parentdir)+'/data/data.csv')
+data_genre = pd.read_csv('data/data_w_genres.csv')
+data = pd.read_csv('data/data.csv')
 df=data.copy()
 
 # merging the two datasets
