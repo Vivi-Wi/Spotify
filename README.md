@@ -15,12 +15,15 @@ The data used in this project was found on kaggle (https://www.kaggle.com/yamaer
 - [x] EDA for both datasets & feature engineering
 - [x] Predictive modelling on continuous target
 - [x] Predictive modelling on binary target
-- [ ] Interactive app estimating a tracks popularity based on inputs and showing similar tracks.
-
-## Results
-
+- [x] Interactive app estimating a tracks popularity based on inputs and showing similar tracks.
 
 ## Future Work
+#### Model Performance
+Improve accuracy of the predictive models (both regression classification) by adding features
+#### Generalisability
+Use time-series data to  be able to generalise over time (i.e. predict popularity at the time) determine long-term successes.
+#### Supervised Clustering
+Train a supervised machine learning model (e.g. using user data) to create a recommendation system
 
 
 ## Files and Folders
@@ -34,9 +37,11 @@ The data used in this project was found on kaggle (https://www.kaggle.com/yamaer
 |Spotify6_Clustering_200812.ipynb| Jupyter Notebook containing clustering methods|
 |Weights-010--7.24545.hdf5 | File containing the optimal weights for neural network (from regression)
 | Pickles folder| Folder containing saved models |
-| plotting.ipynb | Jupyter Notebook containing auxiliary plotting functions for EDA |
-| plotting.py| Copy of plotting.ipynb that can be imported into other notebooks |
+| plotting.py| Auxiliary plotting functions for EDA |
 | Figures folder| Folder containing all figures generated in the course of this project |
+| App folder| Folder containing files for the interactive dash application |
+| Spotify_Popularity_Presentation.pdf| The set of slides used to present the project|
+
 
 
 
